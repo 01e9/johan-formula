@@ -1,0 +1,50 @@
+.johan-formula .formula-input input {
+    width: 2ch;
+    padding: 5px 0 5px 10px;
+    border-width: 0;
+    border-radius: 5px;
+    font-family: monospace;
+    box-sizing: content-box;
+    background-color: #b8e3f5;
+}
+.johan-formula .formula-input input:focus {
+}
+.johan-formula .formula-input.has-error input {
+    background-color: #f5bebf;
+}
+.johan-formula .formula-input.has-match input {
+    background-color: #a8f596;
+}
+
+.johan-formula .formula-input,
+.johan-formula .formula-element {
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.johan-formula .formula-element {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: default;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+}
+.johan-formula .formula-element.is-invalid {
+    box-shadow: 0 3px 8px #f55753;
+}
+
+.johan-formula .formula-element + .formula-element,
+.johan-formula .formula-input + .formula-element,
+.johan-formula .formula-element + .formula-input {
+    margin-left: 10px;
+}
+
+.formula-element.type-parentheses:before {
+    content: '( ';
+}
+.formula-element.type-parentheses:after {
+    content: ' )';
+}
