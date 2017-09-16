@@ -2,6 +2,8 @@
 
 Simple, nice looking formula builder.
 
+![Demo](demo.gif)
+
 ## Usage
 
 ```html
