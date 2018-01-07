@@ -216,6 +216,14 @@
                     } else {
                         if (type) {
                             this.setState('match');
+                        } else {
+                            var valueWithoutLastChar = value.substr(0, value.length - 1),
+                                typeWithoutLastChar = this.matchType(valueWithoutLastChar);
+
+                            if (typeWithoutLastChar) {
+                                this.$input.val(value.substr(-1)).trigger('jf:update-width');
+                                this.formula.addElementAtCursor(typeWithoutLastChar, valueWithoutLastChar);
+                            }
                         }
                     }
                 }.bind(this))
